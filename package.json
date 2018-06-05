@@ -1,0 +1,46 @@
+{
+  "name": "swipebox-10quality",
+  "version": "1.4.5",
+  "description": "Modified version of Swipebox (supports Dailymotion and MP4).",
+  "main": "dist/js/jquery.swipebox.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10quality/swipebox.git"
+  },
+  "keywords": [
+    "swipebox",
+    "lightbox",
+    "youtube",
+    "vimeo",
+    "dailymotion",
+    "mp4",
+    "pictures"
+  ],
+  "author": {
+    "name": "Constantin Saguin",
+    "url": "csag.co"
+  },
+  "contributors": [
+    "10 Quality <info@10quality.com> (https://www.10quality.com/)",
+    "Cami M <info@10quality.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/10quality/swipebox/issues"
+  },
+  "homepage": "https://github.com/10quality/swipebox#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-minify": "0.0.14",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^2.3.2",
+    "node-sass": "^3.4.2"
+  },
+  "dependencies": {
+    "jquery": "^2.1.0"
+  }
+}

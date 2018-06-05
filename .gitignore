@@ -1,14 +1,6 @@
-# Ignore dist
-dist/
-stage/
-
-# Ignore demo scss
-demo/scss/
-
-# Ignore grunt stuff
-**/.sass-cache
-**/.grunt
-**/node_modules
+# Ignore dependencies
+node_modules/
+tmp/
 
 # Windows image file caches
 Thumbs.db
