@@ -1,5 +1,5 @@
 /*!
- * Swipebox v1.4.4.2m | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox
+ * Swipebox v1.4.6 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox
  * Modifications made by Cami M <info@10quality.com> 
  */
 
