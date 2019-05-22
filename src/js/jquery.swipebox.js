@@ -820,9 +820,9 @@
 					}
 					iframe = '<iframe width="560" height="315" src="//www.dailymotion.com/embed/video/' + dailymotionUrl[1] + '"'+ ( plugin.settings.autoplayVideos ? ' allow="autoplay"' : '' ) +' frameborder="0" allowfullscreen></iframe>';
 				} else if ( twitchVideoUrl ) {
-					iframe = '<iframe width="560" height="315" src="https://player.twitch.tv/?video=' + twitchVideoUrl[1] + '"'+ ( plugin.settings.autoplayVideos ? ' allow="autoplay"' : '' ) +' frameborder="0" allowfullscreen></iframe>';
+					iframe = '<iframe width="560" height="315" src="//player.twitch.tv/?video=' + twitchVideoUrl[1] + '"'+ ( plugin.settings.autoplayVideos ? ' allow="autoplay"' : '' ) +' frameborder="0" allowfullscreen></iframe>';
 				} else if ( twitchChannelUrl ) {
-					iframe = '<iframe width="560" height="315" src="https://player.twitch.tv/?channel=' + twitchChannelUrl[1] + '"'+ ( plugin.settings.autoplayVideos ? ' allow="autoplay"' : '' ) +' frameborder="0" allowfullscreen></iframe>';
+					iframe = '<iframe width="560" height="315" src="//player.twitch.tv/?channel=' + twitchChannelUrl[1] + '"'+ ( plugin.settings.autoplayVideos ? ' allow="autoplay"' : '' ) +' frameborder="0" allowfullscreen></iframe>';
 				} else if ( mp4Url ) {
 					iframe = '<video width="540" height="310" controls><source src="' + url + '"" type="video/mp4"></video>';
 				} else {
