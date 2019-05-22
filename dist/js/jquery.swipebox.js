@@ -1,5 +1,5 @@
 /*!
- * Swipebox v1.4.4.1m | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox
+ * Swipebox v1.4.4.2m | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox
  * Modifications made by Cami M <info@10quality.com> 
  */
 
@@ -738,6 +738,7 @@
 						|| src.match( /dailymotion\.com\/([a-zA-Z0-9\-_]+)/ )
 						|| src.match( /dai.ly\/([a-zA-Z0-9\-_]+)/ )
 						|| src.match( /.mp4/ )
+						|| src.match( /twitch\.tv/ )
 					) {
 						return true;
 					}
@@ -793,6 +794,8 @@
 					dailymotionUrl = url.match( /(?:www\.)?dailymotion\.com\/video\/([a-zA-Z0-9\-_]+)/ ),
 					dailymotionShortUrl = url.match( /(?:www\.)?dai\.ly\/([a-zA-Z0-9\-_]+)/ ),
 					mp4Url = url.match( /.mp4/ ),
+					twitchVideoUrl = url.match( /(?:www\.)?twitch\.tv\/videos\/([0-9a-zA-Z]+)/ ),
+					twitchChannelUrl = url.match( /(?:www\.)?twitch\.tv\/([0-9a-zA-Z\_\-]+)/ ),
 					qs = '';
 				if ( youtubeUrl || youtubeShortUrl) {
 					if ( youtubeShortUrl ) {
@@ -816,6 +819,10 @@
 						dailymotionUrl = dailymotionShortUrl;
 					}
 					iframe = '<iframe width="560" height="315" src="//www.dailymotion.com/embed/video/' + dailymotionUrl[1] + '"'+ ( plugin.settings.autoplayVideos ? ' allow="autoplay"' : '' ) +' frameborder="0" allowfullscreen></iframe>';
+				} else if ( twitchVideoUrl ) {
+					iframe = '<iframe width="560" height="315" src="https://player.twitch.tv/?video=' + twitchVideoUrl[1] + '"'+ ( plugin.settings.autoplayVideos ? ' allow="autoplay"' : '' ) +' frameborder="0" allowfullscreen></iframe>';
+				} else if ( twitchChannelUrl ) {
+					iframe = '<iframe width="560" height="315" src="https://player.twitch.tv/?channel=' + twitchChannelUrl[1] + '"'+ ( plugin.settings.autoplayVideos ? ' allow="autoplay"' : '' ) +' frameborder="0" allowfullscreen></iframe>';
 				} else if ( mp4Url ) {
 					iframe = '<video width="540" height="310" controls><source src="' + url + '"" type="video/mp4"></video>';
 				} else {
