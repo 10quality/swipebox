@@ -41,6 +41,6 @@
     "node-sass": "^3.4.2"
   },
   "dependencies": {
-    "jquery": "^2.1.0"
+    "jquery": "^3.4.1"
   }
 }
