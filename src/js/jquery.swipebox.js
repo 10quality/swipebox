@@ -518,18 +518,19 @@
 					}
 				} );
 
-				$( '#swipebox-bottom-bar' ).hover( function() {
-					$this.showBars();
-					bars.addClass( 'visible-bars' );
-					$this.clearTimeout();
-
-				}, function() {
-					if ( plugin.settings.hideBarsDelay > 0 ) {
-						bars.removeClass( 'visible-bars' );
-						$this.setTimeout();
-					}
-
-				} );
+        $( '#swipebox-bottom-bar' ).on({
+          mouseenter: function() {
+            $this.showBars();
+            bars.addClass( 'visible-bars' );
+            $this.clearTimeout();
+          },
+          mouseleave: function() {
+            if ( plugin.settings.hideBarsDelay > 0 ) {
+              bars.removeClass( 'visible-bars' );
+              $this.setTimeout();
+            }
+          }
+        });
 			},
 
 			/**
