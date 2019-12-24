@@ -541,7 +541,7 @@
         bars.addClass('visible-bars');
         $this.setTimeout();
 
-        $('#swipebox-slider').click(function() {
+        $('#swipebox-slider').on('click', function() {
           if (!bars.hasClass('visible-bars')) {
             $this.showBars();
             $this.setTimeout();
