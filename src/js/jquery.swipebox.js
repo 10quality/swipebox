@@ -245,9 +245,9 @@
 			resize : function () {
 				var $this = this;
 
-				$( window ).resize( function() {
+				$( window ).on('resize', function() {
 					$this.setDim();
-				} ).resize();
+				} ).trigger('resize');
 			},
 
 			/**
