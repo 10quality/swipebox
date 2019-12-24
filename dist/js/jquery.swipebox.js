@@ -303,7 +303,7 @@
         $this.setTimeout();
 
         $('body')
-          .bind('touchstart', function(event) {
+          .on('touchstart', function(event) {
             $(this).addClass('touching');
             index = $('#swipebox-slider .slide').index(
               $('#swipebox-slider .slide.current'),
@@ -317,7 +317,7 @@
               transform: 'translate3d(' + currentX + '%, 0, 0)',
             });
 
-            $('.touching').bind('touchmove', function(event) {
+            $('.touching').on('touchmove', function(event) {
               event.preventDefault();
               event.stopPropagation();
               endCoords = event.originalEvent.targetTouches[0];
@@ -402,7 +402,7 @@
 
             return false;
           })
-          .bind('touchend', function(event) {
+          .on('touchend', function(event) {
             event.preventDefault();
             event.stopPropagation();
 
@@ -568,7 +568,7 @@
        */
       keyboard: function() {
         var $this = this;
-        $(window).bind('keyup', function(event) {
+        $(window).on('keyup', function(event) {
           event.preventDefault();
           event.stopPropagation();
 
@@ -596,14 +596,14 @@
             $('#swipebox-top-bar').hide();
           }
         } else {
-          $('#swipebox-prev').bind(action, function(event) {
+          $('#swipebox-prev').on(action, function(event) {
             event.preventDefault();
             event.stopPropagation();
             $this.getPrev();
             $this.setTimeout();
           });
 
-          $('#swipebox-next').bind(action, function(event) {
+          $('#swipebox-next').on(action, function(event) {
             event.preventDefault();
             event.stopPropagation();
             $this.getNext();
@@ -611,7 +611,7 @@
           });
         }
 
-        $('#swipebox-close').bind(action, function() {
+        $('#swipebox-close').on(action, function() {
           $this.closeSlide();
         });
       },
@@ -1062,11 +1062,11 @@
        * Destroy the whole thing
        */
       destroy: function() {
-        $(window).unbind('keyup');
-        $('body').unbind('touchstart');
-        $('body').unbind('touchmove');
-        $('body').unbind('touchend');
-        $('#swipebox-slider').unbind();
+        $(window).off('keyup');
+        $('body').off('touchstart');
+        $('body').off('touchmove');
+        $('body').off('touchend');
+        $('#swipebox-slider').off();
         $('#swipebox-overlay').remove();
 
         if (!$.isArray(elem)) {
