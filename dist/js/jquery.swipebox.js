@@ -25,11 +25,12 @@
         autoplayVideos: false,
         queryStringData: {},
         toggleClassOnLoad: '',
+        selector: null,
       },
       plugin = this,
       elements = [], // slides array [ { href:'...', title:'...' }, ...],
       $elem,
-      selector = elem.selector,
+      // selector = elem.selector,
       isMobile = navigator.userAgent.match(
         /(iPad)|(iPhone)|(iPod)|(Android)|(PlayBook)|(BB10)|(BlackBerry)|(Opera Mini)|(IEMobile)|(webOS)|(MeeGo)/i,
       ),
@@ -82,17 +83,18 @@
         ui.target = $(window);
         ui.init(plugin.settings.initialIndexOnArray);
       } else {
-        $(document).on('click', selector, function(event) {
-          // console.log( isTouch );
+        $(elem).on('click', plugin.settings.selector, function(event) {
 
           if (event.target.parentNode.className === 'slide current') {
             return false;
           }
 
-          if (!$.isArray(elem)) {
-            ui.destroy();
-            $elem = $(selector);
-            ui.actions();
+          ui.destroy();
+
+					if ( plugin.settings.selector === null ) {
+						$elem = $( elem );
+					} else {
+						$elem = $( elem ).find( plugin.settings.selector );
           }
 
           elements = [];
@@ -110,9 +112,7 @@
           }
 
           if (relVal && relVal !== '' && relVal !== 'nofollow') {
-            $elem = $(selector).filter('[' + relType + '="' + relVal + '"]');
-          } else {
-            $elem = $(selector);
+						$elem = $elem.filter( '[' + relType + '="' + relVal + '"]' );
           }
 
           $elem.each(function() {
