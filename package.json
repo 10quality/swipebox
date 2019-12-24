@@ -1,11 +1,11 @@
 {
-  "name": "swipebox-10quality",
+  "name": "swipebox-ewal",
   "version": "1.4.7",
-  "description": "Modified version of Swipebox (supports Dailymotion and MP4).",
+  "description": "Modified version of Swipebox with jquery3 support",
   "main": "dist/js/jquery.swipebox.min.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/10quality/swipebox.git"
+    "url": "https://github.com/ewal/swipebox"
   },
   "keywords": [
     "swipebox",
@@ -22,13 +22,14 @@
   },
   "contributors": [
     "10 Quality <info@10quality.com> (https://www.10quality.com/)",
-    "Cami M <info@10quality.com>"
+    "Cami M <info@10quality.com>",
+    "Emil Löfquist <lofquist@gmail.com>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/10quality/swipebox/issues"
+    "url": "https://github.com/ewal/swipebox/issues"
   },
-  "homepage": "https://github.com/10quality/swipebox#readme",
+  "homepage": "https://github.com/ewal/swipebox#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
