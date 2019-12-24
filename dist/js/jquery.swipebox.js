@@ -246,9 +246,11 @@
       resize: function() {
         var $this = this;
 
-        $(window).on('resize', function() {
+        $(window)
+          .on('resize', function() {
             $this.setDim();
-          }).trigger('resize');
+          })
+          .trigger('resize');
       },
 
       /**
@@ -546,19 +548,19 @@
           }
         });
 
-        $('#swipebox-bottom-bar').hover(
-          function() {
+        $('#swipebox-bottom-bar').on({
+          mouseenter: function() {
             $this.showBars();
             bars.addClass('visible-bars');
             $this.clearTimeout();
           },
-          function() {
+          mouseleave: function() {
             if (plugin.settings.hideBarsDelay > 0) {
               bars.removeClass('visible-bars');
               $this.setTimeout();
             }
           },
-        );
+        });
       },
 
       /**
