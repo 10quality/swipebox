@@ -20,8 +20,17 @@ Swipebox is a jQuery "lightbox" plugin for desktop, mobile and tablet.
 
 ### 10 Quality Fork
 
++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++
+
 - Dailymotion support.
+- Twitch support.
+- Metacafe support.
 - MP4 support.
+- jQuery 3 support. (for jQuery 2 visit [branch jquery-1.2](https://github.com/10quality/swipebox/tree/jquery-1.2))
+
++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++
 
 ###Compatibility
 
@@ -34,7 +43,7 @@ Chrome, Safari, Firefox, Opera, IE9+, IOS4+, Android, windows phone.
 Include jquery and the swipebox script in your head tags or right before your body closing tag.
 
 ```html
-<script src="lib/jquery-1.9.0.js"></script>
+<script src="lib/jquery-3.4.1.js"></script>
 <script src="src/js/jquery.swipebox.js"></script>
 ```
 

@@ -1,7 +1,7 @@
 {
   "name": "swipebox-10quality",
-  "version": "1.4.7",
-  "description": "Modified version of Swipebox (supports Dailymotion and MP4).",
+  "version": "2.0.0",
+  "description": "Modified version of Swipebox (supports Dailymotion, Twitch, Metacafe and MP4) + jQuery 3.",
   "main": "dist/js/jquery.swipebox.min.js",
   "repository": {
     "type": "git",
