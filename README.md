@@ -20,8 +20,17 @@ Swipebox is a jQuery "lightbox" plugin for desktop, mobile and tablet.
 
 ### 10 Quality Fork
 
++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++
+
 - Dailymotion support.
+- Twitch support.
+- Metacafe support.
 - MP4 support.
+- jQuery 1 & 2 (for jQuery 3 visit [branch master](https://github.com/10quality/swipebox))
+
++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++
 
 ###Compatibility
 
